@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 
-
+@st.cache_data
 def get_base64_image(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
