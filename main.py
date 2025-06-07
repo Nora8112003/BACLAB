@@ -34,6 +34,18 @@ def img_to_base64_str(path):
 
 #Ho so nguoi dung
  
+def save_avatar_file(uploaded_file, user_id):
+    # Tạo thư mục avatars nếu chưa tồn tại
+    os.makedirs("avatars", exist_ok=True)
+    # Lấy đuôi file
+    ext = uploaded_file.name.split('.')[-1]
+    # Tạo tên file ảnh đại diện theo user_id
+    file_path = f"avatars/{user_id}.{ext}"
+    # Ghi file
+    with open(file_path, "wb") as f:
+        f.write(uploaded_file.getbuffer())
+    return file_path
+    
 def profile_page():
     st.title("👤 Hồ sơ người dùng")
     user_info = st.session_state.get("user", {})
