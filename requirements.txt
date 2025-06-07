@@ -63,4 +63,4 @@ torch==2.3.0
 torchaudio==2.3.0
 torchvision==0.18.0
 tornado==6.4.2
-tqdm==4.6
+tqdm==4.67.1
