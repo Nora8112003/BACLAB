@@ -14,6 +14,20 @@ from db import update_password, verify_password
 import base64
 import streamlit as st
 
+import os
+import subprocess
+import sys
+
+def install_torch_cpu():
+    subprocess.check_call([sys.executable, "-m", "pip", "install", 
+                           "torch", "torchvision", "torchaudio", 
+                           "--index-url", "https://download.pytorch.org/whl/cpu"])
+
+try:
+    import torch
+except ImportError:
+    install_torch_cpu()
+
 def img_to_base64_str(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
