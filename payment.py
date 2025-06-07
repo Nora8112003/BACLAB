@@ -1,6 +1,6 @@
 import streamlit as st
 import base64
-
+from db import create_order
 @st.cache_data
 def get_base64_image(path):
     with open(path, "rb") as f:
