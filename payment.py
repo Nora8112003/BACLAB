@@ -80,7 +80,7 @@ def show_payment():
             st.session_state["page"] = "main"
             st.session_state["payment_package"] = None
 
-            st.markdown("""<meta http-equiv="refresh" content="2">""", unsafe_allow_html=True)
+            st.rerun()
             st.stop()
 
     with col2:
