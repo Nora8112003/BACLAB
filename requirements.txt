@@ -66,3 +66,4 @@ tqdm==4.67.1
 ultralytics==8.3.113
 ultralytics-thop==2.0.14
 urllib3==2.3.0
+opencv-python-headless==4.11.0.86
