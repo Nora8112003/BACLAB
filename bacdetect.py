@@ -66,7 +66,7 @@ def main():
     is_premium = is_premium_user()
     confirm = st.checkbox("Xác nhận chế độ để tiếp tục")
 
-    model_path = st.session_state.get("model_path", "models/yolov11-custom3/weights/last.pt")
+    model_path = st.session_state.get("model_path", "C:\\Users\\house\\Desktop\\project\\project\\models\\yolov11-custom3\\weights\\last.pt")
     model = load_model(model_path)
 
     st.markdown("""
@@ -207,7 +207,7 @@ def main():
 
         st.success("🎉 Cảm ơn bạn đã sử dụng ứng dụng của chúng tôi!")
         return df_stats
-
+#Xu ly anh 
     if confirm:
         user = st.session_state.get("user", {})
         if not is_admin and not is_premium:
