@@ -7,7 +7,6 @@ from developer import developer
 from home import home
 from admin_orders import review_orders
 from admin_system import system_info 
-from bacdetect import decrement_free_use
 import streamlit.components.v1 as components
 from streamlit_javascript import st_javascript
 from db import update_password, verify_password  
