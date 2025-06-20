@@ -171,6 +171,7 @@ def main_page():
     if st.session_state['page'] == "payment":
         import payment
         payment.show_payment()
+        st.stop()
 
     if st.session_state['authenticated']:
         if st.session_state['role'] == 'admin':
