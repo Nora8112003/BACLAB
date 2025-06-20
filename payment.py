@@ -85,3 +85,4 @@ def show_payment():
         if st.button("⬅ Quay lại trang chủ"):
             st.session_state["page"] = "main"
             st.rerun()
+    st.stop()
