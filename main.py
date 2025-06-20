@@ -283,6 +283,11 @@ def main():
 
     if st.session_state['page'] == "profile":
         profile_page()
+        st.stop()
+    elif st.session_state['page'] == "payment":
+        import payment
+        payment.show_payment()
+        st.stop()
     else:
         main_page()
 
