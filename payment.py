@@ -30,16 +30,21 @@ def show_payment():
 
     # Momo
     with tab1:
-        momo_qr_base64 = get_base64_image("assets/momo_qr.jpg")
-        st.markdown("### Quét mã Momo:")
-        st.image(f"data:image/png;base64,{momo_qr_base64}", width=300)
-        st.info(f"""
-        ➤ Nội dung chuyển khoản: **{st.session_state['user']['username']} - {package['name']}**
+    momo_qr_base64 = get_base64_image("assets/momo_qr.jpg")
+    st.markdown("### Quét mã Momo:")
+    st.image(f"data:image/png;base64,{momo_qr_base64}", width=300)
 
-        ➤ SĐT Momo: **0335526732**
+    username = st.session_state["user"]["username"]
+    package_name = package["name"]
 
-        ➤ Tên: **Ngô Chử Tịch**
-        """)
+    st.markdown(f"""
+    <div style="border:1px solid #ccc; padding:10px; border-radius:10px;">
+        <p>➤ Nội dung chuyển khoản: <b>{username} - {package_name}</b></p>
+        <p>➤ SĐT Momo: <b>0335526732</b></p>
+        <p>➤ Tên: <b>Ngô Chử Tịch</b></p>
+    </div>
+    """, unsafe_allow_html=True)
+
 
     #Ngan hang
     with tab2:
