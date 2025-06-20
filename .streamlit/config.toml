@@ -2,5 +2,4 @@
 runOnSave = false
 [browser]
 gatherUsageStats = false
-[server]
-folderWatchBlacklist = ["venv", "__pycache__", ".git", "node_modules", ".mypy_cache"]
+
