@@ -80,7 +80,6 @@ def show_payment():
             st.success("🎉 Thanh toán thành công! Đơn hàng đã được tạo.")
             st.session_state["page"] = "main"
             st.session_state["payment_package"] = None
-            st.rerun()
     with col2:
         if st.button("⬅ Quay lại trang chủ"):
             st.session_state["page"] = "main"
