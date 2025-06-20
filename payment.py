@@ -84,4 +84,3 @@ def show_payment():
     with col2:
         if st.button("⬅ Quay lại trang chủ"):
             st.session_state["page"] = "main"
-            st.rerun()
