@@ -43,7 +43,8 @@ def show_payment():
             <p>➤ Tên: <b>Ngô Chử Tịch</b></p>
         </div>
         """, unsafe_allow_html=True)
-         st.markdown("---")
+        
+        st.markdown("---")
 # Ngân hàng
     with tab2:
         bank_qr_base64 = get_base64_image("assets/bank_qr.jpg")
